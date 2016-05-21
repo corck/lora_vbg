@@ -10,8 +10,8 @@ defmodule LoraVbg.Sensor do
     timestamps
   end
 
-  @required_fields ~w(name longitude latitude created)
-  @optional_fields ~w()
+  @required_fields ~w(name longitude latitude)
+  @optional_fields ~w(created)
 
   @doc """
   Creates a changeset based on the `model` and `params`.

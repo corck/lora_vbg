@@ -17,7 +17,7 @@ defmodule LoraVbg.SensorController do
       {:ok, sensor} ->
         conn
         |> put_status(:created)
-        |> put_resp_header("location", sensor_path(conn, :show, sensor))
+        #|> put_resp_header("location", sensor_path(conn, :show, sensor))
         |> render("show.json", sensor: sensor)
       {:error, changeset} ->
         conn

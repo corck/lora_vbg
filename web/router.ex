@@ -17,12 +17,13 @@ defmodule LoraVbg.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    resources "/sensors", SensorController
   end
 
 
   # Other scopes may use custom stacks.
-  # scope "/api", LoraVbg do
-  #   pipe_through :api
-  # end
+  scope "/api", LoraVbg do
+     pipe_through :api
+
+     resources "/sensors", SensorController
+  end
 end
