@@ -19,6 +19,8 @@ defmodule LoraVbg.Router do
     get "/", PageController, :index
   end
 
+  resources "/sensors", SensorController
+
   # Other scopes may use custom stacks.
   # scope "/api", LoraVbg do
   #   pipe_through :api
