@@ -5,12 +5,13 @@ defmodule LoraVbg.Sensor do
     field :name, :string
     field :longitude, :float
     field :latitude, :float
+    field :noise, :float
     field :created, Ecto.DateTime
 
     timestamps
   end
 
-  @required_fields ~w(name longitude latitude)
+  @required_fields ~w(name longitude latitude noise)
   @optional_fields ~w(created)
 
   @doc """

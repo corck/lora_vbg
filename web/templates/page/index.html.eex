@@ -22,12 +22,9 @@
 
     var items = [];
      $.each( json.data, function( key, val ) {
-
        L.marker([val.latitude, val.longitude]).addTo(mymap)
-         .bindPopup("I am a Sensor.<br>Noise: " + val.latitude + " dB").openPopup();
-
+         .bindPopup("I am a Sensor.<br>Noise: " + val.noise + " dB").openPopup();
      });
-
   });
 
 

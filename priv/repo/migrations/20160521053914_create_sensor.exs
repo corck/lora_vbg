@@ -6,6 +6,7 @@ defmodule LoraVbg.Repo.Migrations.CreateSensor do
       add :name, :string
       add :longitude, :float
       add :latitude, :float
+      add :noise, :float
       add :created, :datetime
 
       timestamps
