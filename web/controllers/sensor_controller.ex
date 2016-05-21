@@ -6,11 +6,8 @@ defmodule LoraVbg.SensorController do
   plug :scrub_params, "sensor" when action in [:create, :update]
 
   def index(conn, _params) do
-    hash = %{
-    "name" => 'test'
-    }
-    LoraVbg.Endpoint.broadcast("data:lobby", "change", hash)
-    LoraVbg.Endpoint.broadcast("data:lobby", "new_msg", hash)
+    payload = Poison.Parser.parse!(~s({"sensor": {"name": "sensor1", "longitude": 47.3608, "latitude": 9.6867}}))
+    LoraVbg.Endpoint.broadcast("data:lobby", "new_msg", payload)
 
     sensors = Repo.all(Sensor)
     render(conn, "index.json", sensors: sensors)
