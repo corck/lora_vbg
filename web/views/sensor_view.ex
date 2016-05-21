@@ -14,6 +14,7 @@ defmodule LoraVbg.SensorView do
       name: sensor.name,
       longitude: sensor.longitude,
       latitude: sensor.latitude,
+      noise: sensor.noise,
       created: sensor.created}
   end
 end

@@ -1,4 +1,4 @@
-<h1>channel test</h1>
+<h1>LoRa Sensors Overview</h1>
 <div id="mapid" style="width: 600px; height: 400px"></div>
 
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
@@ -23,10 +23,9 @@
     var items = [];
      $.each( json.data, function( key, val ) {
        L.marker([val.latitude, val.longitude]).addTo(mymap)
-         .bindPopup("I am a Sensor.<br>Noise: " + val.noise + " dB").openPopup();
+         .bindPopup(val.name + "<br>Noise: " + Math.round (val.noise) + " dB").openPopup();
      });
   });
-
 
   var popup = L.popup();
 
