@@ -1,30 +1,5 @@
+<h1>channel test</h1>
 
-<div id='map'></div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoidmVkYW5vdmEiLCJhIjoiY2lvZzQ0OWFlMDA1bXZwajdzOGw1bDNheSJ9.s6lO0ikRtoe-PT9pEbQUsA';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v8',
-    zoom: 0
-});
+<div class="test">
 
-var url = 'https://wanderdrone.appspot.com/';
-var source = new mapboxgl.GeoJSONSource({
-    data: url
-});
-window.setInterval(function() {
-    source.setData(url);
-}, 2000);
-
-map.on('load', function () {
-    map.addSource('drone', source);
-    map.addLayer({
-        "id": "drone",
-        "type": "symbol",
-        "source": "drone",
-        "layout": {
-            "icon-image": "rocket-15",
-        }
-    });
-});
-</script>
+</div>

@@ -3,6 +3,8 @@ defmodule LoraVbg.UserSocket do
 
   ## Channels
   channel "rooms:*", LoraVbg.RoomChannel
+  channel "data:*", LoraVbg.DataChannel
+
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
