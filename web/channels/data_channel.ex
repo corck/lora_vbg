@@ -3,7 +3,7 @@ defmodule LoraVbg.DataChannel do
 
   def join("data:lobby", payload, socket) do
     if authorized?(payload) do
-      {:ok, socket}
+      {:ok, "Joined lobby", socket}
     else
       {:error, %{reason: "unauthorized"}}
     end

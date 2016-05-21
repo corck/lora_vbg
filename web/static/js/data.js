@@ -18,4 +18,12 @@ $(function() {
       console.log("Unable to join topic", topic)
     })
 
+  channel.on("change", data => {
+    console.log("Change:", data);
+  })
+
+  channel.on("new_msg", payload => {
+    console.log("new_msg:", payload);
+  })
+
 });

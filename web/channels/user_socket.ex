@@ -2,7 +2,6 @@ defmodule LoraVbg.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  channel "rooms:*", LoraVbg.RoomChannel
   channel "data:*", LoraVbg.DataChannel
 
 
