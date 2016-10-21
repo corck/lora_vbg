@@ -35,8 +35,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :lora_vbg, LoraVbg.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "lora",
+  password: "lora",
   database: "lora_vbg_dev",
   hostname: "localhost",
   pool_size: 10
